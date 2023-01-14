@@ -1,0 +1,97 @@
+.nav-logo {
+  width: 30%;
+  pointer-events: none;
+  padding-top: 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 45px;
+}
+/* //place links and not logo on the right */
+#links {
+    display: flex;
+    text-align: right;
+    right: 40px;
+    justify-content: center;
+    vertical-align: baseline;
+    font-size: 15px;
+    overflow: hidden;
+    -webkit-text-stroke: 0.2px;
+    letter-spacing: 0.025em;
+    cursor: pointer;
+}
+
+#links li{
+    list-style: none;
+    padding: 0 10px;
+    color: white;
+    position: relative;
+}
+
+#links a:hover,
+#links a.active {
+    color: white;
+
+}
+
+#links a:hover::after,
+#links a.active::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile i {
+    color: white;
+}
+#mobile {
+    display: none;
+}
+/* responsive navbar */
+
+@media screen and (max-width:769px) {
+    #links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 90px;
+        right: -800px;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        padding: 169px 0 0 34px;
+        transition: 0.3s ease-in-out;
+        z-index: 50000;
+        margin-top: -15px;
+    }
+
+    #links.active {
+        right: 0;
+    }
+
+    #links li {
+        margin-bottom: 6px;
+        color: black;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    #mobile {
+        display: block;
+    }
+ 
+
+    #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
