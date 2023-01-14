@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 //logo changed in home logo.svg - kept logo place, changed svg after redrawing logo
 import logo from '../logo.svg';
 import './Navbarstyle.css';
+//React router for page nav
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 class Navbar extends Component {
     // click handle for responsive navbar - menu slides in from right when clicking burger icon
@@ -10,8 +12,7 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({clicked : !this.state.clicked})
     }
-    render() {
-        
+    render() {     
         return (
             <div>
                 <nav>
@@ -20,7 +21,9 @@ class Navbar extends Component {
                     </a>
                     <div>
                         <ul id='links' className = {this.state.clicked ? "#links active"  : "links"}>
-                            <li><a className='active' href='../public/index.html' ></a>cases</li>
+                            <li>
+                                <a className='active' href='../public/index.html' ></a>cases
+                            </li>
                             <li><a href='../public/index.html'></a>career</li>
                             <li><a href='../public/index.html'></a>contact</li>
                             <li><a href='../public/index.html'></a>culture</li>
