@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+//logo changed in home logo.svg - kept logo place, changed svg after redrawing logo
 import logo from '../logo.svg';
 import './Navbarstyle.css';
 
 class Navbar extends Component {
-        // click handle for responsive navbar - menu slides in from right when clicking burger icon
-    // upon clicking close icon reverse happens. State change on line 29 if bars(burger icon) clicked then show X and vice-versa
+    // click handle for responsive navbar - menu slides in from right when clicking burger icon
+    // upon clicking close icon reverse happens. State change on line 29 if bars(burger icon) clicked then show X and vice-versa 
     state = {clicked : false};
     handleClick = () => {
         this.setState({clicked : !this.state.clicked})

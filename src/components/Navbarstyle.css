@@ -53,7 +53,7 @@ nav {
 #mobile {
     display: none;
 }
-/* responsive navbar */
+/* responsive navbar -  resize and order/align links in column using flex */
 
 @media screen and (max-width:769px) {
     #links {
